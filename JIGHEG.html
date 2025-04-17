@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Product Description page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f7879b5792.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #one {
+            grid-area: a;
+            height: 30px;
+            background-color: ghostwhite;
+            border: 0;
+            display: flex;
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-top: -8px;
+            padding-top: 5px;
+        }
+
+        #logo {
+            width: 30px;
+            height: 30px;
+            padding-left: 45px;
+        }
+
+        #bar {
+            width: 13%;
+            height: 90%;
+            margin-left: 80%;
+            display: flex;
+            border: 0px;
+        }
+
+        #help {
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 50px;
+
+        }
+
+        #join {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+
+        #join,
+        #help {
+            border-right: 1px solid black;
+        }
+
+        #sign {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #join,
+        #help,
+        #sign {
+            background-color: transparent;
+            border: 0px;
+        }
+
+        #two {
+            grid-area: b;
+            border-radius: 10px;
+            height: 55px;
+            display: grid;
+            grid-template-columns: 30% 40% 20% 10%;
+            background-color: white;
+
+        }
+
+        .div1 {
+            height: 60px;
+
+        }
+
+        .div1>img {
+            margin-top: 4%;
+            margin-left: 7%;
+            height: 35%;
+            width: 15%;
+        }
+
+        .div2 {
+            display: flex;
+            margin-right: 0px;
+            margin-left: 10%;
+        }
+
+        .div2>div {
+
+            height: 20px;
+            margin-right: 20px;
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .div2>div:hover {
+            color: #777777;
+        }
+
+        .div3 {
+            height: 60px;
+            display: flex;
+
+        }
+
+        .div3>input {
+            margin-left: 20%;
+            margin-top: 2.5%;
+            height: 50%;
+        }
+
+        .sizeOfSearch {
+            font-size: 18px;
+            position: absolute;
+            margin-top: 16px;
+            margin-left: 60px;
+        }
+
+        .searchPdts {
+            width: 150px;
+            height: 37px;
+            margin-top: 10px;
+            margin-left: 50px;
+            border-radius: 20px;
+            border: 0px;
+            background-color: #F5F5F5;
+            padding-left: 40px;
+        }
+
+        .searchPdts:hover {
+            background-color: #d1d1d1;
+        }
+
+        .div4>div>span {
+
+            height: 62%;
+            font-size: 30px;
+            padding-left: 18px;
+
+        }
+
+        .spanClass {
+            margin-left: 5%;
+            margin-top: 7px;
+        }
+
+        .bag {
+            border-radius: 90px;
+        }
+
+
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+
+
+        /* product starts here */
+        .topCont {
+            width: 10%;
+            height: 50px;
+            border: 1px solid transparent;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 35px;
+        }
+
+        .topCont>h3:hover {
+            color: blue;
+            cursor: pointer;
+        }
+
+        .container {
+            width: 95%;
+            height: 600px;
+            border-top: 1px solid gray;
+            margin: auto;
+            display: grid;
+            grid-template-areas:
+                "a a a a a a a a b b b b";
+            grid-gap: 20px;
+            padding: 10px;
+            margin-bottom: 50px;
+        }
+
+        .imgCont {
+            grid-area: a;
+            border: 1px solid transparent;
+            height: 600px;
+        }
+
+        .imgCont>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .desCont {
+            grid-area: b;
+            border: 1px solid transparent;
+            background-color: rgb(250, 251, 253);
+            border-radius: 20px;
+        }
+
+        #name,
+        #color,
+        #price,
+        #size,
+        #thead,
+        #delDetails {
+            margin-left: 10px;
+        }
+
+        #parades,
+        #delDetails {
+            margin-left: 10px;
+            color: rgb(146, 144, 144);
+        }
+
+        #price {
+            margin-bottom: 0%;
+        }
+
+        .table {
+            margin-left: 10px;
+            border: 1px solid black;
+            padding: 10px 30px;
+        }
+
+        #bag,
+        #buy {
+            padding: 10px 20px;
+            margin-left: 10px;
+            margin-top: 30px;
+            width: 70%;
+            border-radius: 15px;
+            font-size: 15px;
+            background-color: transparent;
+        }
+
+        #bag:hover {
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+
+
+        #buy:hover {
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+
+        .sizeButtonlbl {
+            margin-left: 10px;
+        }
+
+        .sizeButton {
+            padding: 10px 20px;
+        }
+
+        /* footer css part */
+        #eigthteen {
+            width: 100%;
+            background-color: black;
+        }
+
+        .footerContainer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footerDiv1 {
+            width: 60%;
+            display: flex;
+            font-family: Helvetica;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+
+        .footerDiv1 a:hover {
+            color: white;
+        }
+
+        .unorderlist>li {
+            list-style: none;
+        }
+
+        .unorderlist {
+            line-height: 2.3;
+        }
+
+        .anchorhead {
+            color: white;
+            text-decoration: none;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 2.3;
+        }
+
+        .anchortextcolor {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .iconContainer {
+            display: flex;
+            margin-right: 4%;
+            justify-content: space-between;
+            margin-top: 3%;
+        }
+
+        .iconContainer>div {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 20px;
+            background-color: grey;
+        }
+
+        .icondiv {
+            margin-right: 10px;
+        }
+
+        .icon {
+            color: black;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 17%;
+        }
+
+        #horizontalline {
+            height: 0.1mm;
+            border: 0px;
+            background-color: rgba(128, 128, 128, 0.288);
+        }
+
+        .bottomfooter {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 3%;
+            font-family: Helvetica;
+        }
+
+        .location {
+
+            height: 50px;
+            width: 63%;
+        }
+
+        #mapicon {
+            color: white;
+        }
+
+        .anchorhead {
+            color: white;
+            text-decoration: none;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 2.3;
+        }
+
+        #footerlabel {
+            color: grey;
+            font-size: 11px;
+            margin-left: 15px;
+        }
+
+        .policies {
+            margin-right: 3%;
+            font-size: 13px;
+            width: 37%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1%;
+        }
+
+        .policies a {
+            font-size: 11px;
+        }
+
+        .policies a:hover {
+            color: white;
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 420px) {
+            #productDisplay {
+                width: 93%;
+                border: 1px solid transparent;
+                margin: auto;
+                margin-top: 10px;
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: repeat(1, 1fr);
+                padding: 10px;
+            }
+
+            #buttonDivs {
+                width: 95%;
+                height: 170px;
+                border: 1px solid transparent;
+                border-bottom: 1px solid rgb(170, 167, 167);
+                text-align: left;
+                margin: auto;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div id="one">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
+            alt="" id="logo">
+        <div id="bar">
+            <button id="help" class="help">Help</button>
+            <button id="join">Join us</button>
+            <button id="sign"><a onclick="modalClick()">Sign In</a></button>
+        </div>
+    </div>
+    <div id="two">
+        <div class="div1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png"
+                alt="logo" height="35%">
+        </div>
+        <div class="div2">
+            <div><a href="mens.html">Men</a></div>
+            <div><a href="womens.html">Women</a></div>
+            <div><a href="kids.html">Kids</a></div>
+            <div><a href="snkrs.html">SNKRS</a></div>
+        </div>
+        <div class="div3">
+            <span><i class="fas fa-search sizeOfSearch"></i><input type="text" class="searchPdts"
+                    placeholder="Search" /></span>
+        </div>
+        <div class="div4">
+            <div class="spanClass">
+                <span><i class="far fa-heart"></i></span>
+                <span class="bag"><a href="bagitems.html"><i class="fas fa-shopping-bag"></i></a></span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- product part starts here -->
+    <div class="topCont">
+        <h3 onclick="backtopage()">Back</h3>
+        <h3 onclick="backtohome()">Home</h3>
+    </div>
+    <div class="container">
+
+    </div>
+
+    <!-- Footer part starts here -->
+    <div id="eigthteen">
+        <div class="footermaindiv">
+            <div class="footerContainer">
+                <div class="footerDiv1">
+                    <ul class="unorderlist">
+                        <li><a class="anchorhead" href="#">FIND STORE</a></li>
+                        <li><a class="anchorhead" href="#">BECOME A MEMBER</a></li>
+                        <li><a class="anchorhead" href="#">SIGN UP FOR EMAL</a></li>
+                        <li><a class="anchorhead" href="#">STUDENT DISCOUNT</a></li>
+                        <li><a class="anchorhead" href="#">SEND US FEEDBACK</a></li>
+                    </ul>
+                    <ul class="unorderlist">
+                        <li><a class="anchorhead" href="#">GET HELP</a></li>
+                        <li><a class="anchortextcolor" href="help.html">Order Status</a></li>
+                        <li><a class="anchortextcolor" href="help.html">Delivery</a></li>
+                        <li><a class="anchortextcolor" href="help.html">Returns</a></li>
+                        <li><a class="anchortextcolor" href="#">Payment option</a></li>
+                        <li><a class="anchortextcolor" href="#">Contact Us On Nike.com Inquiries</a></li>
+                        <li><a class="anchortextcolor" href="#">Contact Us On Other Inquiries</a></li>
+                    </ul>
+                    <ul class="unorderlist">
+                        <li><a class="anchorhead" href="#">ABOUT NIKE</a></li>
+                        <li><a class="anchortextcolor" href="https://news.nike.com/">News</a></li>
+                        <li><a class="anchortextcolor" href="#">Careers</a></li>
+                        <li><a class="anchortextcolor" href="https://investors.nike.com/Home/default.aspx">Investors</a>
+                        </li>
+                        <li><a class="anchortextcolor" href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="iconContainer">
+                    <div class="icondiv"><a class="icon"
+                            href="https://twitter.com/Nike?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                                class="fab fa-twitter"></i></a></div>
+                    <div class="icondiv"><a class="icon" href="https://www.facebook.com/nike/"><i
+                                class="fab fa-facebook-f"></i></a></div>
+                    <div class="icondiv"><a class="icon" href="https://www.youtube.com/user/NIKE"><i
+                                class="fab fa-youtube"></i></a></div>
+                    <div><a class="icon" href="https://www.instagram.com/nike/?hl=en"><i
+                                class="fab fa-instagram"></i></a></div>
+                </div>
+            </div>
+            <hr id="horizontalline">
+            <div class="bottomfooter">
+                <div class="location">
+                    <a href="#"><i id="mapicon" class="fas fa-map-marker-alt"></i></a>
+                    <a class="anchorhead" href="#">India</a>
+                    <label id="footerlabel">© 2021 Nike, Inc. All Rights Reserved</label>
+                </div>
+                <div class="policies">
+                    <a class="anchortextcolor" href="#">Guides</a>
+                    <a class="anchortextcolor" href="#">Terms of Sale</a>
+                    <a class="anchortextcolor" href="#">Terms of Use</a>
+                    <a class="anchortextcolor" href="#">Nike Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var mensProduct = JSON.parse(localStorage.getItem("productDetails"));
+    //console.log(mensProduct);
+    var bagProducts = JSON.parse(localStorage.getItem("bagProducts")) || [];
+
+    displayProducts(mensProduct)
+
+    function displayProducts(elem) {
+        mensProduct.filter(function (elem) {
+            var div1 = document.createElement("div");
+            div1.setAttribute("class", "imgCont")
+            var img = document.createElement("img");
+            img.setAttribute("src", elem.imgUrl);
+
+            var div2 = document.createElement("div");
+            div2.setAttribute("class", "desCont");
+            var name = document.createElement("h1");
+            name.textContent = elem.name;
+            name.setAttribute("id", "name")
+            var color = document.createElement("p");
+            color.textContent = elem.color;
+            color.setAttribute("id", "color")
+            var price = document.createElement("h2");
+            price.textContent = elem.Price;
+            console.log(typeof (price))
+            price.setAttribute("id", "price")
+            var paraDes = document.createElement("p");
+            paraDes.textContent = "(Inclusive of all taxes)";
+            paraDes.setAttribute("id", "parades")
+            var size = document.createElement("p");
+            size.textContent = "Select Size";
+            size.setAttribute("id", "size")
+
+
+            //product description Box - size details
+            var SizeBtnLabel = document.createElement("div");
+            SizeBtnLabel.setAttribute("class", "sizeButtonlbl");
+            // description Box - size button
+            var SizeBtnOne = document.createElement("button");
+            SizeBtnOne.setAttribute("class", "sizeButton");
+            SizeBtnOne.textContent = elem.size[0];
+            SizeBtnOne.onclick = function () {
+                selectSize(SizeBtnOne, SizeBtnTwo,
+                    SizeBtnThree, SizeBtnFour);
+            }
+            // description Box - size button
+            var SizeBtnTwo = document.createElement("button");
+            SizeBtnTwo.setAttribute("class", "sizeButton");
+            SizeBtnTwo.textContent = elem.size[1];
+            SizeBtnTwo.onclick = function () {
+                selectSize(SizeBtnTwo, SizeBtnOne,
+                    SizeBtnThree, SizeBtnFour);
+            }
+            // description Box - size button
+            var SizeBtnThree = document.createElement("button");
+            SizeBtnThree.setAttribute("class", "sizeButton");
+            SizeBtnThree.textContent = elem.size[2];
+            SizeBtnThree.onclick = function () {
+                selectSize(SizeBtnThree, SizeBtnOne,
+                    SizeBtnTwo, SizeBtnFour);
+            }
+            // description Box - size button
+            var SizeBtnFour = document.createElement("button");
+            SizeBtnFour.setAttribute("class", "sizeButton");
+            SizeBtnFour.textContent = elem.size[3];
+            SizeBtnFour.onclick = function () {
+                selectSize(SizeBtnFour, SizeBtnOne,
+                    SizeBtnTwo, SizeBtnThree);
+            }
+
+
+            var breakLine = document.createElement("br");
+            var addtobagBtn = document.createElement("button");
+            addtobagBtn.textContent = "Add To Bag";
+            addtobagBtn.setAttribute("id", "bag");
+            addtobagBtn.addEventListener("click", function () {
+                addtobag(elem)
+            });
+            var buynowBtn = document.createElement("button");
+            buynowBtn.textContent = "Buy Now";
+            buynowBtn.setAttribute("id", "buy");
+            buynowBtn.addEventListener('click', function () {
+                window.location.href = "payment.html"
+            })
+            var details = document.createElement("p");
+            details.textContent = "Free Deleivery and Return";
+            details.setAttribute("id", "delDetails")
+
+            SizeBtnLabel.append(SizeBtnOne, SizeBtnTwo, SizeBtnThree, SizeBtnFour);
+            div1.append(img);
+            div2.append(name, color, price, paraDes, size, SizeBtnLabel, addtobagBtn, breakLine, buynowBtn, details);
+
+            document.querySelector(".container").append(div1, div2)
+
+        });
+
+    }
+
+    function addtobag(elem) {
+        bagProducts.push(elem);
+        alert("Your Product added to bag succesfully");
+        localStorage.setItem("bagProducts", JSON.stringify(bagProducts))
+    }
+
+    var btnCount = 0;
+    function selectSize(p, a, b, c) {
+
+        p.setAttribute("class", "sizeButtonClicked");
+        a.setAttribute("class", "sizeButton");
+        b.setAttribute("class", "sizeButton");
+        c.setAttribute("class", "sizeButton");
+
+        var sizeArr = mensProduct.filter(function (el) {
+            // if(el.size == p.textContent){
+            el.size = p.textContent;
+            // console.log(el.size);
+            btnCount++;
+            // }
+        });
+
+        displayProducts(sizeArr);
+    }
+
+    function backtopage() {
+        window.location.href = "mens.html"
+    }
+
+    function backtohome() {
+        window.location.href = ""
+    }
+
+</script>
